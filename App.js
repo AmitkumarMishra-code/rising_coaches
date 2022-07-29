@@ -13,6 +13,19 @@ import AppNavigator from './AppNavigator';
 import DraftbitTheme from './themes/DraftbitTheme.js';
 import cacheAssetsAsync from './config/cacheAssetsAsync';
 import { GlobalVariableProvider } from './config/GlobalVariableContext';
+import { useFonts } from 'expo-font';
+import { Cantarell_400Regular } from '@expo-google-fonts/cantarell';
+import {
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+  Poppins_700Bold,
+} from '@expo-google-fonts/poppins';
+import {
+  Roboto_400Regular,
+  Roboto_500Medium,
+  Roboto_700Bold,
+} from '@expo-google-fonts/roboto';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -26,7 +39,42 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const [isReady, setIsReady] = React.useState(false);
-  const fontsLoaded = true;
+  const [fontsLoaded] = useFonts({
+    Cantarell_400Regular,
+    Cantarell_400Regular,
+    Poppins_400Regular,
+    Poppins_400Regular,
+    Poppins_400Regular,
+    Poppins_400Regular,
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_500Medium,
+    Poppins_500Medium,
+    Poppins_500Medium,
+    Poppins_500Medium,
+    Poppins_600SemiBold,
+    Poppins_600SemiBold,
+    Poppins_600SemiBold,
+    Poppins_600SemiBold,
+    Poppins_600SemiBold,
+    Poppins_700Bold,
+    Poppins_700Bold,
+    Roboto_400Regular,
+    Roboto_400Regular,
+    Roboto_400Regular,
+    Roboto_400Regular,
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_500Medium,
+    Roboto_700Bold,
+    Roboto_700Bold,
+    Roboto_700Bold,
+    Roboto_700Bold,
+    Roboto_700Bold,
+    Roboto_700Bold,
+    Roboto_700Bold,
+    Roboto_700Bold,
+  });
 
   if (!isReady || !fontsLoaded) {
     return (
